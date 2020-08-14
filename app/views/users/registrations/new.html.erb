@@ -1,26 +1,33 @@
 <div class="sign-up">
-  <h2>Sign up</h2>
+
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
+  <div class="register">
+  <%= link_to '→', 'javascript:history.go(-1);', :class => "arrow" %>
+    <h2>REGISTER</h2>
+    <div class="actions">
+      <%= f.submit "Next", :class => "next" %>
+    </div>
+  </div>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :Name %><br />
     <%= f.text_field :name, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :username %><br />
+    <%= f.label :Username %><br />
     <%= f.text_field :username, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :Email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :Password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -28,13 +35,10 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :Password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
   <% end %>
 
   <%= render "users/shared/links" %>

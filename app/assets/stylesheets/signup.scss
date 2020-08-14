@@ -1,5 +1,33 @@
 .sign-up {
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register {
+  background-color: #3778c2;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.register h2, .arrow, .next {
+  color: white;
+}
+
+.register h2 {
+  font-size: 1.4em;
+  padding: 1em 0;
+}
+
+.next {
+  border: none;
+  background: none;
+  padding: 1em 0.5em;
+  font-size: 1.2em;
+}
+
+.arrow {
+  font-size: 3em;
+  transform: rotate(180deg);
 }
