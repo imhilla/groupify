@@ -1,0 +1,31 @@
+// Place all the styles related to the page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.groupify {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(243, 243, 243);
+  height: 100vh;
+}
+
+.groupify-h2 {
+  padding-top: 200px;
+}
+
+.group-buttons {
+  padding-top: 100px;
+
+}
+
+.btn-block {
+  padding: 0.4em 5em;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-block:hover {
+  color: white;
+  background-color: #3778c2;
+  outline: none;
+}
