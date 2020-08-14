@@ -9,6 +9,13 @@
     </div>
   </div>
   <div class="form-field">
+    <label class="btn btn-default btn-change-avatar">
+     <%= image_tag("avatar.webp", :class => "avatar") %>Upload picture
+      <span style="display:none;">
+        <%= f.file_field :image, id: "fileUploader"%>
+      </span>
+    </label>
+
     <div class="field">
       <%= f.text_field :name, autofocus: true, :class => "field-input", placeholder: 'Name' %>
     </div>

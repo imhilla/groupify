@@ -2,7 +2,10 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
-
+  <%= form_for @user, url: users_path, html: { multipart: true } do |form| %>
+  <%= form.file_field :avatar %>
+  <%= form.submit %>
+<% end %>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name, autofocus: true %>
