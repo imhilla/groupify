@@ -1,26 +1,34 @@
-<h2>Log in</h2>
+<div class="sign-up">
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="register">
+    <%= link_to '→', 'javascript:history.go(-1);', :class => "arrow" %>
+    <h2>LOGIN</h2>
+    <div class="actions">
+      <%= f.submit "Log in", :class => "next" %>
+    </div>
+
   </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
+  <div class="form-field">
     <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "field-input", placeholder: 'Email' %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "current-password", :class => "field-input", placeholder: 'Password' %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+    <div class="field-rem">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
+    <% end %>
+
+  </div><br>
+
   <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+  <%= render "users/shared/links" %>
 
-<%= render "users/shared/links" %>
+</div>

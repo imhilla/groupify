@@ -43,6 +43,7 @@
 .form-field {
   background-color: white;
   padding: 0.2em 1em;
+  padding-top: 1em;
 }
 
 .field-input {
@@ -67,4 +68,8 @@
 
 .field-input-top {
   border-top: #ccc 1px solid;
+}
+
+.field-rem {
+  padding-top: 1em;
 }
