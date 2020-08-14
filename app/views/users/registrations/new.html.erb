@@ -1,46 +1,38 @@
 <div class="sign-up">
-
-
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
   <div class="register">
-  <%= link_to '→', 'javascript:history.go(-1);', :class => "arrow" %>
+    <%= link_to '→', 'javascript:history.go(-1);', :class => "arrow" %>
     <h2>REGISTER</h2>
     <div class="actions">
       <%= f.submit "Next", :class => "next" %>
     </div>
   </div>
+  <div class="form-field">
+    <div class="field">
+      <%= f.text_field :name, autofocus: true, :class => "field-input", placeholder: 'Name' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :Name %><br />
-    <%= f.text_field :name, autofocus: true %>
+    <div class="field">
+      <%= f.text_field :username, autofocus: true, :class => "field-input", placeholder: 'Username' %>
+    </div>
+
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "field-input", placeholder: 'Email' %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "new-password", :class => "field-input", placeholder: 'Password' %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", :class => "field-input", placeholder: 'Password confirmation' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :Username %><br />
-    <%= f.text_field :username, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :Email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :Password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :Password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
 
   <% end %>
 
-  <%= render "users/shared/links" %>
+  <!--<%= render "users/shared/links" %>-->
 
 </div>

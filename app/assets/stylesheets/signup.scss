@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(243, 243, 243);
+  height: 100vh;
 }
 
 .register {
@@ -11,7 +13,9 @@
   width: 100vw;
 }
 
-.register h2, .arrow, .next {
+.register h2,
+.arrow,
+.next {
   color: white;
 }
 
@@ -23,11 +27,33 @@
 .next {
   border: none;
   background: none;
-  padding: 1em 0.5em;
+  padding: 1.2em 0.5em;
   font-size: 1.2em;
+}
+
+.next:hover {
+  outline: none;
 }
 
 .arrow {
   font-size: 3em;
   transform: rotate(180deg);
+}
+
+.form-field {
+  background-color: white;
+  padding: 0.2em 1em;
+}
+
+.field-input {
+  font-size: 0.9em;
+  padding: 12px 20px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.field-input:hover {
+  outline: none;
 }
