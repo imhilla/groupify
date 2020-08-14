@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+
   protected
 
   # There are just three actions in Devise that allows any set of parameters to be passed down to the model,
