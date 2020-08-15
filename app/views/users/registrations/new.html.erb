@@ -1,5 +1,5 @@
 <div class="sign-up">
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)), html: { multipart: true } do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
   <div class="register">
     <%= link_to '→', 'javascript:history.go(-1);', :class => "arrow" %>
@@ -12,7 +12,7 @@
     <label class="btn btn-default btn-change-avatar">
      <%= image_tag("avatar.webp", :class => "avatar") %>Upload picture
       <span style="display:none;">
-        <%= f.file_field :image, id: "fileUploader"%>
+        <%= f.file_field :image %>
       </span>
     </label>
 
