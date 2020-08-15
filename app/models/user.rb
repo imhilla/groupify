@@ -7,7 +7,6 @@ class User < ApplicationRecord
   has_many_attached :images
   validates_attachment_content_type :image, content_type: %r{\Aimage/.*\z}
 
-
   def thumbnail input
     return self.images[input].variant(resize: '300x300!').processed
   end
