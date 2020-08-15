@@ -4,7 +4,7 @@ Rails.application.routes.draw do
            :sessions => "users/sessions",
            :registrations => "users/registrations" }
            resources :users, :only => [:index, :show]
-           resources :posts
+           resources :articles
            resources :posts do
             resources :comments
           end
