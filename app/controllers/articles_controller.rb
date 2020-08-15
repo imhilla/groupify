@@ -16,9 +16,9 @@ class ArticlesController < ApplicationController
     @article.author = current_user
     @article.save
 
+    
     redirect_to article_path(@article)
   end
-
 
   def article_params
     params.require(:article).permit(:title, :body)

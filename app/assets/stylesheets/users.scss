@@ -1,3 +1,20 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.main {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3778c2;
+}
+
+.main h2 {
+  padding-top: 0.3em ;
+  color: white;
+  font-weight: bolder;
+}
+
+.main i {
+  padding-top: 0.7em;
+  font-size: 20px;
+  color: white;
+}
