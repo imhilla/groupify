@@ -5,5 +5,7 @@ Rails.application.routes.draw do
            :registrations => "users/registrations" }
            resources :users, :only => [:index, :show]
            resources :posts
-
+           resources :posts do
+            resources :comments
+          end
 end

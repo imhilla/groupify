@@ -1,3 +1,7 @@
+<h3>Comments (<%= @post.comments.size %>)</h3>
 <h1><%= @post.title %></h1>
 <p><%= @post.body %></p>
+<h3>Comments</h3>
+<%= render partial: 'posts/comment', collection: @post.comments %>
+<%= render partial: 'comments/form' %>
 <%= link_to "<< Back to Posts List", posts_path %>
