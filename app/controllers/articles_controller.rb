@@ -13,12 +13,14 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    @article.author = current_user
     @article.save
 
     redirect_to article_path(@article)
   end
 
+
   def article_params
-    params.require(:article).permit(:title, :body)
+    params.require(:article).permit(:title, :body, :author_id)
   end
 end
