@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
     user_path(current_user)
   end
   
-
   protected
 
   # There are just three actions in Devise that allows any set of parameters to be passed down to the model,
