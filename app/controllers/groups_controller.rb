@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
   def index
     @groups = Group.all
+    @groupalp = Group.all.sort{|b,a| a.name <=> b.name } 
   end
 
   def show

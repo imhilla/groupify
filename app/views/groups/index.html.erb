@@ -1,12 +1,20 @@
-<h1>All groups</h1>
+<div class="all-groups">
+  <h1>All groups</h1>
 
-<ul id="articles">
-  <% @groups.each do |group| %>
-  <li>
-    <%= link_to group.name, group_path(group) %>
-  </li>
-  <%= image_tag group.icon.url(:medium), :class => '' %>
-  <% end %>
-</ul>
+  <div id="articles">
+    <% @groupalp.each do |group| %>
+    <div>
+      <%= image_tag group.icon.url(:medium), :class => 'group-image' %>
+    </div>
+    <div>
+      <%= link_to group.name.capitalize, group_path(group) %>
+      <div>
+        Created at
+        <%= group.created_at.strftime("%Y-%m-%d") %>
+      </div>
+    </div>
+    <% end %>
+  </div>
 
-<%= link_to "Create a New Group", new_group_path, class: "new-group" %>
+  <%= link_to "Create a New Group", new_group_path, class: "new-group" %>
+</div>
