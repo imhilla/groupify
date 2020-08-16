@@ -5,6 +5,11 @@
     <h2><%= @user.name %><br></h2>
     <h3><%= @user.username %><br></h3>
   </div>
+  <div class="side-bar-links">
+  <%= link_to 'Profile', user_path, :class => 'side-link1' %>
+  <%= link_to 'External', :class => 'side-link2' %>
+  <%= link_to 'Groups', groups_path, :class => 'side-link3' %>
+  </div>
 </div>
 
 <div class="main">
