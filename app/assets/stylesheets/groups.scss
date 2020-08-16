@@ -37,8 +37,25 @@
   align-items: center;
 }
 
-.new-group h1{
+.new-group h1 {
   font-size: 1em;
   text-align: center;
   padding: 1em;
+}
+
+.under-group h2 {
+  font-size: 1em;
+  text-align: center;
+  padding: 1em;
+}
+
+.show-article {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  padding: 0.5em;
+}
+
+.under-group h3 {
+  font-size: 1em;
 }

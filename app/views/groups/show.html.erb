@@ -1,4 +1,11 @@
-<h3> Articles under this group </h3>
-<% Article.where(group_id: @group.id).each do |article| %>
-<%= article.title %>
-<% end %>
+<div class="container under-group">
+  <h2> Articles under this group </h2>
+  <% Article.where(group_id: @group.id).each do |article| %>
+  <div class="show-article">
+    <div class="show-body">
+      <h3><%= article.title %></h3>
+      <p><%= article.body %> <%= link_to ' read more', article_path %></p>
+    </div>
+  </div>
+  <% end %>
+</div>
