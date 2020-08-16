@@ -9,6 +9,10 @@
   display: flex;
   justify-content: space-between;
   padding: 0.7em;
+  background-color: white;
+  -webkit-box-shadow: 0px 10px 8px -10px rgba(143, 143, 143, 1);
+  -moz-box-shadow: 0px 10px 8px -10px rgba(143, 143, 143, 1);
+  box-shadow: 0px 10px 8px -10px rgba(143, 143, 143, 1);
 }
 
 .count {
@@ -23,6 +27,8 @@
 
 .article-body {
   color: black;
+  font-size: 0.8em;
+  line-height: 3px;
 }
 
 .article-body:hover {
@@ -32,6 +38,7 @@
 
 .hash-tag {
   color: rgb(70, 149, 223);
+  font-size: 0.8em;
 }
 
 .new-article {
@@ -52,4 +59,22 @@
   margin: 10px;
   background-color: white;
   padding: 10px;
+}
+
+.article-row {
+  display: flex;
+}
+
+.article-icon {
+  height: 70px;
+  width: 70px;
+  margin-right: 0.3em;
+}
+
+.article-body-height {
+  line-height: 15px;
+}
+
+.article-second {
+  padding-left: 0.4em;
 }
