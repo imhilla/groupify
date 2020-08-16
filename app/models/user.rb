@@ -6,8 +6,7 @@ class User < ApplicationRecord
   has_attached_file :image, styles: { large: '600x600>', medium: '300x300>', thumb: '150x150#' }
   has_many_attached :images
   validates_attachment_content_type :image, content_type: %r{\Aimage/.*\z}
-  has_many :groups
-  
+
   def thumbnail(input)
     images[input].variant(resize: '300x300!').processed
   end

@@ -1,0 +1,12 @@
+<h1>All groups</h1>
+
+<ul id="articles">
+  <% @groups.each do |group| %>
+  <li>
+    <%= link_to group.name, group_path(group) %>
+  </li>
+  <%= image_tag group.icon.url(:medium), :class => '' %>
+  <% end %>
+</ul>
+
+<%= link_to "Create a New Group", new_group_path, class: "new-group" %>

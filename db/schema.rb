@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_16_053613) do
+ActiveRecord::Schema.define(version: 2020_08_16_091548) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -18,13 +18,19 @@ ActiveRecord::Schema.define(version: 2020_08_16_053613) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "author_id"
+    t.string "group_id"
+    t.string "—force"
   end
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
-    t.string "icon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "icon"
+    t.string "icon_file_name"
+    t.string "icon_content_type"
+    t.bigint "icon_file_size"
+    t.datetime "icon_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

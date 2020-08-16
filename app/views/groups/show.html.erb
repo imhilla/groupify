@@ -1,0 +1,4 @@
+<h3> Articles under this group </h3>
+<% Article.where(group_id: @group.id).each do |article| %>
+<%= article.title %>
+<% end %>
