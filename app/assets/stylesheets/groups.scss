@@ -30,3 +30,15 @@
   background-color: #3778c2;
   color: white;
 }
+
+.new-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-group h1{
+  font-size: 1em;
+  text-align: center;
+  padding: 1em;
+}

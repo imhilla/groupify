@@ -1,23 +1,26 @@
-<h1>Create a New Group</h1>
-<%= form_for(@group) do |f| %>
-<ul>
-  <% @group.errors.full_messages.each do |error| %>
-  <li><%= error %></li>
+<div class="container new-group">
+  <h1>Create a New Group</h1>
+  <%= form_for(@group) do |f| %>
+  <ul>
+    <% @group.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+    <% end %>
+  </ul>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <label class="btn btn-default btn-change-avatar">
+    <%= image_tag("avatar.webp", :class => "avatar") %>Upload icon
+    <span style="display:none;">
+      <%= f.file_field :icon %>
+    </span>
+  </label>
+
+  <p>
+    <%= f.submit %>
+  </p>
   <% end %>
-</ul>
-<p>
-  <%= f.label :name %><br />
-  <%= f.text_field :name %>
-</p>
 
-<label class="btn btn-default btn-change-avatar">
-  <%= image_tag("avatar.webp", :class => "avatar") %>Upload icon
-  <span style="display:none;">
-    <%= f.file_field :icon %>
-  </span>
-</label>
-
-<p>
-  <%= f.submit %>
-</p>
-<% end %>
+</div>
