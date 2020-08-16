@@ -1,3 +1,55 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.all {
+  background-color: rgb(243, 243, 243);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7em;
+}
+
+.count {
+  font-weight: bold;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-body {
+  color: black;
+}
+
+.article-body:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.hash-tag {
+  color: rgb(70, 149, 223);
+}
+
+.new-article {
+  padding: 0.2em 0.6em 0.2em 0.5em;
+  background-color: #3778c2;
+  font-size: 20px;
+  color: white;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.article-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  margin: 10px;
+  background-color: white;
+  padding: 10px;
+}

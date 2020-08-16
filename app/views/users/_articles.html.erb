@@ -1,0 +1,26 @@
+<div class="all">
+  <div class="total">
+   <div>
+      articles:
+    </div>
+    <div class="count">
+      <%= Article.all.size%>
+    </div>
+   
+  </div>
+  <div class="articles">
+    <% Article.all.each do |article| %>
+    <div class="article-container">
+      <div>
+        <%= link_to article.body , article_path(article), :class => 'article-body'%>
+      </div>
+      <div class="hash-tag">
+        <span>#</span><%= link_to Group.find(article.group_id).name, group_path(article.group_id) %>
+      </div>
+    </div>
+    <% end %><br>
+  </div>
+
+
+  <%= link_to "+", new_article_path, class: "new-article" %>
+</div>
