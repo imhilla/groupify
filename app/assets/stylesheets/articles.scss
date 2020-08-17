@@ -1,9 +1,6 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.all {
-  background-color: rgb(243, 243, 243);
-}
 
 .total {
   display: flex;
@@ -97,4 +94,15 @@
 
 .like-retweet button i {
   color: rgb(74, 147, 255);
+}
+
+.article-show {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: start;
+}
+
+.article-show h1 {
+  font-size: 1.3em;
 }
