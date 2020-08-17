@@ -5,6 +5,7 @@
     <div class="show-body">
       <h3><%= article.title %></h3>
       <p><%= article.body %></p>
+      <h3>Author: <span><%= User.find(article.author_id).username %></span></h3>
     </div>
   </div>
   <% end %>
