@@ -53,7 +53,10 @@
             <span>#</span><%= link_to Group.find(article.group_id).name, group_path(article.group_id) %>
           </div>
           <div class="like-retweet">
-            <button><i class="fa fa-comment"></i></button>
+            <button class="d-flex flex-row">
+              <i class="fa fa-comment"></i> 
+              <%= article.comments.count %>
+            </button>
             <button><i class="fa fa-heart"></i></button>
             <button><i class="fa fa-retweet"></i></button>
             <button><i class="fa fa-share-alt"></i></button>
