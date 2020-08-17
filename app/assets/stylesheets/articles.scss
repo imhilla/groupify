@@ -55,11 +55,8 @@
   grid-template-rows: auto;
   margin: 10px;
   background-color: white;
-  padding: 10px;
-}
-
-.article-container:hover {
-  background-color: rgb(243, 243, 243);
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid rgb(207, 207, 207);
 }
 
 .article-row {
@@ -90,6 +87,10 @@
   background-color: white;
   padding-right: 20px;
   padding-top: 3px;
+}
+
+.like-retweet button:hover {
+  outline: none;
 }
 
 .like-retweet button i {
