@@ -9,7 +9,7 @@
 
   </div>
   <div class="articles">
-    <% Article.all.each do |article| %>
+    <% Article.all.where("author_id =?", current_user.id).each do |article| %>
     <div class="article-container">
       <div class="article-row">
         <div>
