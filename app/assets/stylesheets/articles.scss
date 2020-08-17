@@ -61,6 +61,10 @@
   padding: 10px;
 }
 
+.article-container:hover {
+  background-color: rgb(243, 243, 243);
+}
+
 .article-row {
   display: flex;
 }
@@ -88,6 +92,7 @@
   border: none;
   background-color: white;
   padding-right: 20px;
+  padding-top: 3px;
 }
 
 .like-retweet button i {
