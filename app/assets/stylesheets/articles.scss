@@ -37,7 +37,7 @@
 }
 
 .hash-tag {
-  color: rgb(70, 149, 223);
+  color: rgb(74, 147, 255);
   font-size: 0.8em;
 }
 
@@ -81,5 +81,15 @@
 
 .article-second h3 {
   font-size: 13px;
-  color: rgb(95, 95, 255);
+  color: rgb(74, 147, 255);
+}
+
+.like-retweet button {
+  border: none;
+  background-color: white;
+  padding-right: 20px;
+}
+
+.like-retweet button i {
+  color: rgb(74, 147, 255);
 }
