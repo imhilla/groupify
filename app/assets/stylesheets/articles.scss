@@ -53,7 +53,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  margin: 10px;
+  margin: 0 10px;
   background-color: white;
   padding: 10px 0 10px 0;
   border-bottom: 1px solid rgb(207, 207, 207);
@@ -114,4 +114,5 @@
 
 .profile-name h3 {
   padding-right: 5px;
+  color: black;
 }
