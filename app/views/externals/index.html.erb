@@ -4,34 +4,30 @@
       articles:
     </div>
     <div class="count">
-      <%= Article.all.where("author_id =?", current_user.id).count %>
+      <%= Article.all.where("author_id =?", nil).count %>
     </div>
   </div>
   <div class="articles">
-    <% Article.all.each do |article| %>
+    <% Article.all.where("group_id =?", nil).each do |article| %>
     <div class="article-container">
       <div class="article-row">
         <div>
           <%= image_tag Group.find(article.group_id).icon.url(:medium), :class => 'article-icon' %>
         </div>
         <div class="article-second">
-          <h3><%= User.find(article.author_id).username %><%= article.created_at.strftime(" • %kh") %></h3>
           <div class="article-body-height">
             <%= link_to article.body , article_path(article), :class => 'article-body'%>
           </div>
           <div class="hash-tag">
             <span>#</span><%= link_to Group.find(article.group_id).name, group_path(article.group_id) %>
           </div>
-          <div class="like-retweet">
-            <button><i class="fa fa-comment"></i></button>
-            <button><i class="fa fa-heart"></i></button>
-            <button><i class="fa fa-retweet"></i></button>
-            <button><i class="fa fa-share-alt"></i></button>
-          </div>
         </div>
       </div>
+
     </div>
     <% end %><br>
   </div>
+
+
   <%= link_to "+", new_article_path, class: "new-article" %>
 </div>
