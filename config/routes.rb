@@ -7,5 +7,8 @@ Rails.application.routes.draw do
            resources :articles
            resources :groups
            resources :externals
+           resources :articles do
+            resources :comments
+           end
          
 end

@@ -27,5 +27,9 @@
 <div class="article-show">
   <h1><%= @article.title %></h1>
   <p><%= @article.body %></p>
+  <h3>Comments</h3>
+  <%= render partial: 'articles/comment', collection: @article.comments %>
+  <%= render partial: 'comments/form' %>
+
   <%= link_to "Back", articles_path, :class => 'btn' %>
 </div>
