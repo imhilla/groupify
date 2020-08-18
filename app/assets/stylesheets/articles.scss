@@ -20,6 +20,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(235, 235, 235);
 }
 
 .article-body {
@@ -52,11 +53,9 @@
 .article-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  margin: 0 10px;
   background-color: white;
-  padding: 10px 0 10px 0;
-  border-bottom: 1px solid rgb(207, 207, 207);
+  padding: 10px 5px 10px 5px;
+  margin: 5px 10px;
 }
 
 .article-row {
