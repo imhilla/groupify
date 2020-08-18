@@ -31,7 +31,10 @@
               <i class="fa fa-comment"></i>
               <%= article.comments.count if article.comments.count != 0  %>
               <button><i class="fa fa-retweet"></i></button>
-            </button> <button><i class="fa fa-heart"></i></button>
+            </button>
+            <button><i class="fa fa-heart"></i>
+              <%= article.likes.size unless article.likes.count.zero? %>
+            </button>
             <button><i class="fa fa-share-alt"></i></button>
           </div>
         </div>
