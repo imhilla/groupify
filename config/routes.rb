@@ -8,7 +8,8 @@ Rails.application.routes.draw do
            resources :groups
            resources :externals
            resources :articles do
-            resources :comments
-           end
-         
+           resources :comments
+           resource :likes
+          end
+          
 end

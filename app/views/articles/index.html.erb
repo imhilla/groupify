@@ -59,13 +59,12 @@
             </button>
             <button><i class="fa fa-retweet"></i></button>
             <button><i class="fa fa-heart"></i>
-              <%= pluralize(article.likes.size) unless article.likes.size.zero?%>
+              <%= article.likes.size unless article.likes.count.zero? %>
             </button>
             <button><i class="fa fa-share-alt"></i></button>
           </div>
         </div>
       </div>
-
     </div>
     <% end %><br>
   </div>
