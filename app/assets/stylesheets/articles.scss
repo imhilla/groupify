@@ -44,16 +44,21 @@
   color: white;
   position: fixed;
   bottom: 2.8em;
-  right: 40px;
+  right: 22px;
   z-index: 1000;
+}
+
+.new-article:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .new-article-background {
   position: fixed;
-  bottom: 4.2em;
-  right: 26px;
-  height: 40px;
-  width: 40px;
+  bottom: 4.5em;
+  right: 15px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
   background-color: #3272bb;
 }
