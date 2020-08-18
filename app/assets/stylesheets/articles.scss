@@ -43,8 +43,8 @@
   font-size: 25px;
   color: white;
   position: fixed;
-  bottom: 2.8em;
-  right: 22px;
+  bottom: 2.75em;
+  right: 23px;
   z-index: 1000;
 }
 
@@ -149,6 +149,7 @@
 
 .most-recent-link:hover {
   text-decoration: none;
+  color: white;
 }
 
 .refresh {
