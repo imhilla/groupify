@@ -116,3 +116,24 @@
   padding-right: 5px;
   color: black;
 }
+
+.most-recent {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  justify-content: flex-end;
+  background-color: #3272bb;
+}
+
+.most-recent div {
+  padding: 0.5em 1em;
+  color: white;
+}
+
+.most-recent-link {
+  color: white;
+}
+
+.most-recent-link:hover {
+  text-decoration: none;
+}

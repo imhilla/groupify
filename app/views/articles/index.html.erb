@@ -23,6 +23,10 @@
   <h2>G</h2>
   <i class="fa fa-search"></i>
 </div>
+<div class="most-recent">
+  <div> <%= link_to 'Most recent', articles_path, :class => 'most-recent-link' %></div>
+  <div>Most ancient</div>
+</div>
 
 <div class="all">
   <div class="total">
@@ -35,7 +39,7 @@
 
   </div>
   <div class="articles">
-    <% Article.all.each do |article| %>
+    <% @most_recent.each do |article| %>
     <div class="article-container">
       <div class="article-row">
         <div>
