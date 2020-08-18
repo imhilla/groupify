@@ -137,3 +137,31 @@
 .most-recent-link:hover {
   text-decoration: none;
 }
+
+.refresh {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 13%;
+  background-color: #5fb523;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.refresh-button {
+  text-transform: uppercase;
+  color: white;
+  background-color: #5fb523;
+  border: none;
+  font-size: 1.2em;
+  padding: 0.3em 5em;
+  border: 1px solid white;
+  margin-top: 0.5em;
+  border-radius: 5px;
+}
+
+.refresh-button:hover {
+  outline: none;
+}
