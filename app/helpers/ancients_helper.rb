@@ -1,0 +1,2 @@
+module AncientsHelper
+end

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
            resources :externals
            resources :articles do
            resources :comments
-           resource :likes
+           resources :likes
           end
-          
+          resources :ancients, :only => [:index]
 end
