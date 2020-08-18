@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
-    @most_recent = Article.order("created_at asc")
+    @most_recent = Article.order("created_at desc")
   end
 
   def show
