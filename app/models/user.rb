@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_attached_file :image, styles: { large: '600x600>', medium: '300x300>', thumb: '150x150#' }
   has_many_attached :images
+  has_many :likes, dependent: :destroy
   validates_attachment_content_type :image, content_type: %r{\Aimage/.*\z}
 
   def thumbnail(input)
