@@ -40,14 +40,22 @@
 }
 
 .new-article {
-  padding: 0.2em 0.6em 0.2em 0.5em;
-  background-color: #3778c2;
-  font-size: 20px;
+  font-size: 25px;
   color: white;
-  border-radius: 100%;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 2.8em;
+  right: 40px;
+  z-index: 1000;
+}
+
+.new-article-background {
+  position: fixed;
+  bottom: 4.2em;
+  right: 26px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #3272bb;
 }
 
 .article-container {
