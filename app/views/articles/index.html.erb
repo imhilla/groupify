@@ -55,10 +55,12 @@
           <div class="like-retweet">
             <button class="d-flex flex-row">
               <i class="fa fa-comment"></i>
-              <%= article.comments.count if article.comments.count != 0 %>
+              <%= article.comments.count unless article.comments.count.zero? %>
             </button>
             <button><i class="fa fa-retweet"></i></button>
-            <button><i class="fa fa-heart"></i></button>
+            <button><i class="fa fa-heart"></i>
+              <%= pluralize(article.likes.size) unless article.likes.size.zero?%>
+            </button>
             <button><i class="fa fa-share-alt"></i></button>
           </div>
         </div>
