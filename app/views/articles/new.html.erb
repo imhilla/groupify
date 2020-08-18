@@ -6,7 +6,7 @@
   <% end %>
 </ul>
 
-<%= select_tag(:group_id, options_for_select(@groups), :include_blank => true) %>
+<%= select_tag(:group_id, options_for_select(@groups), :prompt=>"Select group") %>
 <p>
   <%= f.label :title %><br />
   <%= f.text_field :title %>
