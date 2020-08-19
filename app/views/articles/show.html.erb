@@ -13,11 +13,15 @@
   </div>
   <p><%= @article.body %></p>
   <div class="like-comment">
-    <div class="article-like-show"><%= pluralize(@article.likes.count, "like") %></div>
-    <div class="article-like-comment"><%= pluralize(@article.comments.count, "comment") %></div> 
+    <div class="article-like-show d-flex">
+      <%= button_to 'like', article_likes_path(@article), method: :post, :class => 'like-button-comment btn-xs' %>
+      <%= pluralize(@article.likes.count, "like") %>
+    </div>
+    <div class="article-like-comment d-flex">
+      <%= button_to 'comment', article_likes_path(@article), method: :post, :class => 'like-button-comment btn-xs' %>
+      <%= pluralize(@article.comments.count, "comment") %></div>
   </div>
   <%= render partial: 'articles/comment', collection: @article.comments %>
-  <%= button_to 'Like', article_likes_path(@article), method: :post %>
   <%= render partial: 'comments/form' %>
 
   <%= link_to "Back", articles_path, :class => 'btn' %>
