@@ -1,29 +1,4 @@
-<div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="sidebar-content">
-    <%= User.where("id =?", current_user.id).find_each do |user| %>
-    <%= image_tag user.image.url(:medium), :class => 'sidebar-image' %>
-    <h2><%= user.name %><br></h2>
-    <h3><%= user.username %><br></h3>
-    <% end %>
-  </div>
-  <div class="side-bar-links">
-    <%= User.where("id =?", current_user.id).find_each do |user| %>
-    <div class="profile-link">
-      <i class="fa fa-user"></i><%= link_to 'Profile', user_path(user.id), :class => 'side-link1' %>
-    </div><div class="hard-rule"></div>
-    <% end %>
-    <div class="profile-link">
-       <i class="fa fa-home"></i><%= link_to 'Feed', articles_path, :class => 'side-link2' %>
-    </div><div class="hard-rule"></div>
-    <div class="profile-link">
-        <i class="fa fa-users"></i><%= link_to 'All groups', groups_path, :class => 'side-link3' %>
-    </div><div class="hard-rule"></div>
-     <div class="profile-link">
-      <i class="fa fa-link"></i><%= link_to 'External', externals_path, :class => 'side-link2' %>
-    </div><div class="hard-rule"></div>
-  </div>
-</div>
+<%= render 'sidebar' %>
 <div class="main">
   <button class="openbtn" onclick="openNav()">☰</button>
   <h2>G</h2>
