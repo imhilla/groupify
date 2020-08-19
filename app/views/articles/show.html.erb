@@ -8,7 +8,9 @@
 
 <div class="article-show">
   <div class="articles-show">
+      <% if @article.group_id.present? %>
     <%= image_tag Group.find(@article.group_id).icon.url(:medium), :class => 'article-icon' %>
+    <% end %>
     <h1><%= @article.title %></h1>
   </div>
   <p><%= @article.body %></p>
@@ -18,11 +20,9 @@
       <%= pluralize(@article.likes.count, "like") %>
     </div>
     <div class="article-like-comment d-flex">
-      <%= button_to 'comment', article_likes_path(@article), method: :post, :class => 'like-button-comment btn-xs' %>
+      <%= button_to 'comment', new_article_comment_path(@article), method: :post, :class => 'like-button-comment btn-xs' %>
       <%= pluralize(@article.comments.count, "comment") %></div>
   </div>
   <%= render partial: 'articles/comment', collection: @article.comments %>
-  <%= render partial: 'comments/form' %>
-
   <%= link_to "Back", articles_path, :class => 'btn' %>
 </div>
