@@ -185,3 +185,24 @@
 .all {
   padding-bottom: 2em;
 }
+
+.article-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2em;
+}
+
+.article-new h1 {
+  font-size: 1.3em;
+}
+
+.text-area-new {
+  width: 300px;
+  height: 100px;
+}
+
+.text-feild-new {
+  width: 300px;
+  height: 30px;
+}

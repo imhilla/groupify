@@ -1,21 +1,24 @@
-<h1>Create a New Article</h1>
-<%= form_for(@article) do |f| %>
-<ul>
-  <% @article.errors.full_messages.each do |error| %>
-  <li><%= error %></li>
-  <% end %>
-</ul>
+<div class="container article-new">
+  <h1>Create a New Article</h1>
+  <%= form_for(@article) do |f| %>
+  <ul>
+    <% @article.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+    <% end %>
+  </ul>
 
-<%= select_tag(:group_id, options_for_select(@groups), :include_blank => 'None') %>
-<p>
-  <%= f.label :title %><br />
-  <%= f.text_field :title %>
-</p>
-<p>
-  <%= f.label :body %><br />
-  <%= f.text_area :body %>
-</p>
-<p>
-  <%= f.submit %>
-</p>
-<% end %>
+  <%= select_tag(:group_id, options_for_select(@groups), :include_blank => 'None') %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title, :class => "text-feild-new" %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body,:class => "text-area-new" %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
+
+</div>
