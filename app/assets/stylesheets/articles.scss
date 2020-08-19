@@ -210,3 +210,61 @@
 .article-show h3 {
   font-size: 17px;
 }
+
+.main h2 {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.articles-show {
+  display: flex;
+  flex-direction: row;
+}
+
+.articles-show h1 {
+  padding: 20px 0 0 10px;
+}
+
+.article-show p {
+  font-size: 15px;
+  padding: 10px 0;
+}
+
+.like-comment {
+  display: flex;
+  justify-content: space-between;
+  width: 95vw;
+  border-top: 1px solid rgb(214, 214, 214);
+  border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.article-like-show,
+.article-like-comment {
+  padding: 10px 0;
+}
+
+.commented-by {
+  display: flex;
+  margin-top: 20px;
+}
+
+.comment-icon {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.comment-username-name {
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+}
+
+.comment-username-name p {
+  padding-right: 5px;
+  font-weight: bold;
+}
+
+.comment-body {
+  margin: 0 10px;
+}

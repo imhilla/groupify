@@ -2,14 +2,20 @@
 
 <div class="main">
   <button class="openbtn" onclick="openNav()">☰</button>
-  <h2>G</h2>
+  <h2>DETAILS</h2>
   <i class="fa fa-search"></i>
 </div>
 
 <div class="article-show">
-  <h1><%= @article.title %></h1>
+  <div class="articles-show">
+    <%= image_tag Group.find(@article.group_id).icon.url(:medium), :class => 'article-icon' %>
+    <h1><%= @article.title %></h1>
+  </div>
   <p><%= @article.body %></p>
-  <h3>Comments</h3>
+  <div class="like-comment">
+    <div class="article-like-show"><%= pluralize(@article.likes.count, "like") %></div>
+    <div class="article-like-comment"><%= pluralize(@article.comments.count, "comment") %></div> 
+  </div>
   <%= render partial: 'articles/comment', collection: @article.comments %>
   <%= button_to 'Like', article_likes_path(@article), method: :post %>
   <%= render partial: 'comments/form' %>
