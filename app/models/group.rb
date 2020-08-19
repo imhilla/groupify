@@ -4,6 +4,7 @@ class Group < ApplicationRecord
   has_many_attached :icons
   validates_attachment_content_type :icon, content_type: %r{\Aimage/.*\z}
 
+
   def thumbnail(input)
     icons[input].variant(resize: '300x300!').processed
   end
