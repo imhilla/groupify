@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
   def index
     @groups = Group.all
-    @groupalp = Group.all.order(:name )
+    @groupalp = Group.all.order(:name)
   end
 
   def show

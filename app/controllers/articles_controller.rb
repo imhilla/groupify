@@ -24,6 +24,8 @@ class ArticlesController < ApplicationController
     redirect_to article_path(@article)
   end
 
+  private
+
   def article_params
     params.require(:article).permit(:title, :body, :icon)
   end

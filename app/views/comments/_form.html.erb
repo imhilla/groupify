@@ -1,15 +1,17 @@
-<h3>Post a Comment</h3>
+<div class="comment-new">
+  <h3>Post a Comment</h3>
 
-<%= form_for [ @article, @comment ] do |f| %>
+  <%= form_for [ @article, @comment ] do |f| %>
   <p>
-    <%= f.label :author_name %><br/>
-    <%= f.text_field :author_name %>
+    <%= f.label :author_name %><br />
+    <%= f.text_field :author_name, :class => 'text-field-new' %>
   </p>
   <p>
-    <%= f.label :body %><br/>
-    <%= f.text_area :body %>
+    <%= f.label :body %><br />
+    <%= f.text_area :body, :class => 'text-area-new' %>
   </p>
   <p>
     <%= f.submit 'Submit' %>
   </p>
-<% end %>
+  <% end %>
+</div>
