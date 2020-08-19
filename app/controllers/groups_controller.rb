@@ -1,7 +1,11 @@
 class GroupsController < ApplicationController
   def index
     @groups = Group.all
+<<<<<<< HEAD
     @groupalp = Group.all.order(:name)
+=======
+    @groupalp = Group.all.sort { |b, a| a.name <=> b.name }
+>>>>>>> parent of 604f42f... fix groupalp algorithm
   end
 
   def show
