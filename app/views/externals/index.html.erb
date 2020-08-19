@@ -29,30 +29,29 @@
       articles:
     </div>
     <div class="count">
-      <%= Article.all.where("author_id =?", nil).count %>
+      <%= Article.where(group_id: [nil, ""]).count %>
     </div>
   </div>
   <div class="articles">
-    <% Article.all.where("group_id =?", nil).each do |article| %>
+    <% Article.where(group_id: [nil, ""]).each do |article| %>
     <div class="article-container">
       <div class="article-row">
         <div>
-          <%= image_tag Group.find(article.group_id).icon.url(:medium), :class => 'article-icon' %>
+          <%= image_tag User.find(article.author_id).image.url(:medium), :class => 'article-icon' %>
         </div>
         <div class="article-second">
           <div class="article-body-height">
             <%= link_to article.body , article_path(article), :class => 'article-body'%>
           </div>
           <div class="hash-tag">
-            <span>#</span><%= link_to Group.find(article.group_id).name, group_path(article.group_id) %>
+           <% if article.group_id.present? %>
+             <span>#</span><%= link_to Group.find(article.group_id).name, group_path(article.group_id) %>
+            <% else %>#Groupify
+            <% end %>
           </div>
         </div>
       </div>
-
     </div>
     <% end %><br>
   </div>
-
-
-  <%= link_to "+", new_article_path, class: "new-article" %>
 </div>

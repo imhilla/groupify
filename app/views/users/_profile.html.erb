@@ -12,7 +12,7 @@
     <div class="article-container">
       <div class="article-row">
         <div>
-          <%= image_tag Group.find(article.group_id).icon.url(:medium), :class => 'article-icon' %>
+          <%= image_tag User.find(article.author_id).image.url(:medium), :class => 'article-icon' %>
         </div>
         <div class="article-second">
           <div class="profile-name">
@@ -24,7 +24,10 @@
             <%= link_to article.body , article_path(article), :class => 'article-body'%>
           </div>
           <div class="hash-tag">
-            <span>#</span><%= link_to Group.find(article.group_id).name, group_path(article.group_id) %>
+           <% if article.group_id.present? %>
+             <span>#</span><%= link_to Group.find(article.group_id).name, group_path(article.group_id) %>
+            <% else %>#Groupify
+            <% end %>
           </div>
           <div class="like-retweet">
             <button class="d-flex flex-row">
