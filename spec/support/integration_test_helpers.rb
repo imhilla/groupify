@@ -46,6 +46,11 @@ module IntegrationTestHelpers
     click_button('commit')
   end
 
+  
+  def create_like
+    click_button('like')
+  end
+
   def splash_page
     visit root_path
   end
