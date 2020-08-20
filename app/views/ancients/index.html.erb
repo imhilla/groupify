@@ -23,6 +23,15 @@
   <div class="articles">
     <% @most_ancient.each do |article| %>
     <div class="article-container">
+      <% if article.likes.size > 0 %>
+      <div class="who-liked">
+        <p><i class="fa fa-heart"></i>
+          <% article.likes.each do |like| %>
+          <%= like.user.username %> </p>
+        <% end %><p>&nbsp; liked</p>
+      </div>
+      <% end %>
+
       <div class="article-row">
         <div>
           <%= image_tag User.find(article.author_id).image.url(:medium), :class => 'article-icon' %>
@@ -36,8 +45,8 @@
             <%= link_to article.body , article_path(article), :class => 'article-body'%>
           </div>
           <div class="hash-tag">
-           <% if article.group_id.present? %>
-             <span>#</span><%= link_to Group.find(article.group_id).name, group_path(article.group_id) %>
+            <% if article.group_id.present? %>
+            <span>#</span><%= link_to Group.find(article.group_id).name, group_path(article.group_id) %>
             <% else %>#Groupify
             <% end %>
           </div>
