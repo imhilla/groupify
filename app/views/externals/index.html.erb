@@ -18,14 +18,15 @@
   <div class="articles">
     <% Article.where(group_id: [nil, ""]).each do |article| %>
     <div class="article-container">
-       <% if article.likes.size > 0 %>
-      <div class="who-liked">
+         <div class="who-liked">
+        <%= check_likes(article) %>
+        <%= article.likes.find_each do |like| %>
         <p><i class="fa fa-heart"></i>
-          <% article.likes.each do |like| %>
-          <%= like.user.username %> </p>
-        <% end %><p>&nbsp; liked</p>
+          <%= like.user.username %>
+        </p>
+        <p>&nbsp; liked</p>
+        <% end %>
       </div>
-      <% end %>
       <div class="article-row">
         <div>
           <%= image_tag User.find(article.author_id).image.url(:medium), :class => 'article-icon' %>
