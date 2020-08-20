@@ -46,9 +46,7 @@ module IntegrationTestHelpers
     click_button('commit')
   end
 
-  
-
-  def check_group_post
-
+  def splash_page
+    visit root_path
   end
 end
