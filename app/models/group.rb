@@ -4,7 +4,6 @@ class Group < ApplicationRecord
   has_many_attached :icons, dependent: :destroy
   validates_attachment_content_type :icon, content_type: %r{\Aimage/.*\z}
   validates :name, presence: true, uniqueness: true
-  validates :icon, presence: true
 
   def thumbnail(input)
     icons[input].variant(resize: '300x300!').processed
