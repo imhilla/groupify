@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_19_141831) do
+ActiveRecord::Schema.define(version: 2020_08_20_045436) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 2020_08_19_141831) do
     t.integer "author_id"
     t.string "group_id"
     t.string "—force"
+  end
+
+  create_table "articles_likes", id: false, force: :cascade do |t|
+    t.integer "article_id", null: false
+    t.integer "like_id", null: false
+    t.index ["article_id", "like_id"], name: "index_articles_likes_on_article_id_and_like_id"
   end
 
   create_table "comments", force: :cascade do |t|
