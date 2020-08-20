@@ -23,6 +23,13 @@ module IntegrationTestHelpers
     fill_in('Title', :with => 'What is a capstone project')
     fill_in('Title', :with => 'What is a capstone project?')
     fill_in('Body', :with => 'Capstone projects are projects to test your mastery of a particular section')
-    click_button('Create article')
+    click_button('commit')
   end
+
+  def create_comment
+    click_button('comment')
+    fill_in('Body', :with => 'I am working on my capstone right now')
+    click_button('commit')
+  end
+
 end
