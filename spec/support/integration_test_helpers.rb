@@ -26,10 +26,29 @@ module IntegrationTestHelpers
     click_button('commit')
   end
 
+  def create_group
+    fill_in('Name', :with => 'Amazon')
+    attach_file("group[icon]", "#{Rails.root}/spec/files/attachment.jpeg", visible: false)
+    click_button('commit')
+  end
+
+  def create_article_group
+    select 'Amazon', from: 'group_id' 
+    fill_in('Title', :with => 'What is a capstone project')
+    fill_in('Title', :with => 'What is a capstone project?')
+    fill_in('Body', :with => 'Capstone projects')
+    click_button('commit')
+  end
+
   def create_comment
     click_button('comment')
     fill_in('Body', :with => 'I am working on my capstone right now')
     click_button('commit')
   end
 
+  
+
+  def check_group_post
+
+  end
 end

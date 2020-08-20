@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'ancients', type: :system do
+RSpec.describe 'externals', type: :system do
   describe 'index page' do
     it 'shows the right content in the externals page' do
       do_signup('hillary', 'hillary', 'hillaryodhiambo@gmail.com', '123456')
