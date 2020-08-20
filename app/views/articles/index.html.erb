@@ -1,10 +1,6 @@
 <%= render './users/sidebar' %>
+<%= render './ancients/g' %>
 
-<div class="main">
-  <button class="openbtn" onclick="openNav()">☰</button>
-  <h2>G</h2>
-  <i class="fa fa-search"></i>
-</div>
 <div class="most-recent">
   <div><%= link_to 'Most recent', articles_path, :class => 'most-recent-link' %></div>
   <div><%= link_to 'Most ancient', ancients_path, :class => 'most-recent-link' %></div>

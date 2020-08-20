@@ -1,10 +1,6 @@
 <%= render './users/sidebar' %>
+<%= render 'g' %>
 
-<div class="main">
-  <button class="openbtn" onclick="openNav()">☰</button>
-  <h2>G</h2>
-  <i class="fa fa-search"></i>
-</div>
 <div class="most-recent">
   <div><%= link_to 'Most recent', articles_path, :class => 'most-recent-link' %></div>
   <div><%= link_to 'Most ancient', ancients_path, :class => 'most-recent-link' %></div>
@@ -18,7 +14,6 @@
     <div class="count">
       <%= Article.all.size%>
     </div>
-
   </div>
   <div class="articles">
     <% @most_ancient.each do |article| %>
@@ -32,7 +27,6 @@
         <p>&nbsp; liked</p>
         <% end %>
       </div>
-
       <div class="article-row">
         <div>
           <%= image_tag User.find(article.author_id).image.url(:medium), :class => 'article-icon' %>
