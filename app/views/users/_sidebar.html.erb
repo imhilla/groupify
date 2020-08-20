@@ -10,7 +10,7 @@
   <div class="side-bar-links">
     <%= User.where("id =?", current_user.id).find_each do |user| %>
     <div class="profile-link">
-      <div class="border-i"><i class="fa fa-user"></i></div><%= link_to 'Profile', user_path(user.id), :class => 'side-link1' %>
+      <div class="border-i"><i class="fa fa-user"></i></div><%= link_to 'Profile', user_path(user.id), :class => 'side-link1', id: 'side-link1'  %>
     </div><div class="hard-rule"></div>
     <% end %>
     <div class="profile-link">
