@@ -15,8 +15,7 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require './spec/support/integration_test_helpers.rb'
-require "paperclip/matchers"
-
+require 'paperclip/matchers'
 
 RSpec.configure do |config|
   config.include Paperclip::Shoulda::Matchers

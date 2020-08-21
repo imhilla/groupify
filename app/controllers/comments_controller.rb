@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
   def new
-    user = current_user.id
     @comment = Comment.new(article_id: params[:article_id])
     @article = Article.find(params[:article_id])
   end
+
   def create
     @comment = Comment.new(comment_params)
     @comment.article_id = params[:article_id]

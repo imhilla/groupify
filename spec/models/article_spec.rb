@@ -17,4 +17,3 @@ RSpec.describe Article, type: :model do
     expect(Article.all.count).to be_eql 1
   end
 end
-

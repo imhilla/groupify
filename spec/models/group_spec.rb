@@ -4,9 +4,11 @@ RSpec.describe Group, type: :model do
   describe 'associations' do
     it { should have_many(:articles).dependent(:destroy) }
     it { should have_attached_file(:icon) }
-    it { should validate_attachment_content_type(:icon).
-      allowing('image/png', 'image/gif').
-      rejecting('text/plain', 'text/xml')}
+    it {
+      should validate_attachment_content_type(:icon)
+        .allowing('image/png', 'image/gif')
+        .rejecting('text/plain', 'text/xml')
+    }
   end
 
   before(:all) do
