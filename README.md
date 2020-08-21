@@ -16,6 +16,9 @@ The apps function is so stellar that you can see who has liked and commented on 
 
 There are sections for example in the recent section, users can see articles in the latest written articles. The viceversa is true since users can see articles in ancient's order.
 
+## Live version
+
+This is a web app and not a website. Access the web app <a href="https://groupify-hilla.herokuapp.com/">here</a> via phone.
 
 
 
