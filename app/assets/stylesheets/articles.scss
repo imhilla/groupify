@@ -7,9 +7,9 @@
   justify-content: space-between;
   padding: 0.7em;
   background-color: white;
-  -webkit-box-shadow: 0px 10px 8px -10px rgba(143, 143, 143, 1);
-  -moz-box-shadow: 0px 10px 8px -10px rgba(143, 143, 143, 1);
-  box-shadow: 0px 10px 8px -10px rgba(143, 143, 143, 1);
+  -webkit-box-shadow: 0 10px 8px -10px rgba(143, 143, 143, 1);
+  -moz-box-shadow: 0 10px 8px -10px rgba(143, 143, 143, 1);
+  box-shadow: 0 10px 8px -10px rgba(143, 143, 143, 1);
 }
 
 .count {
@@ -179,7 +179,6 @@
   text-transform: uppercase;
   color: white;
   background-color: #5fb523;
-  border: none;
   font-size: 1.2em;
   padding: 0.3em 5em;
   border: 1px solid white;

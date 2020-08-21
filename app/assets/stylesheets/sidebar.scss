@@ -51,7 +51,6 @@
   color: white;
   border: none;
   padding-bottom: 10px;
-
 }
 
 .openbtn:hover {
@@ -60,7 +59,7 @@
 
 .main {
   transition: margin-left .5s;
-  padding: 0 10px;
+  padding: 0 10px 0 10px;
 }
 
 .sidebar-image {
@@ -69,7 +68,6 @@
   width: 100px;
   margin: 0.5em;
 }
-
 
 .sidenav {
   height: 100%;
