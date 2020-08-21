@@ -223,17 +223,31 @@
 .main h2 {
   font-size: 30px;
   padding: 10px;
-   color: white;
+  color: white;
   animation-name: example;
   animation-duration: 4s;
 }
 
 @keyframes example {
-  0%   {color: white;}
-  25%  {color: green;}
-  50% {color: white;}
-  75% {color: green;}
-  100% {color: white;}
+  0% {
+    color: white;
+  }
+
+  25% {
+    color: green;
+  }
+
+  50% {
+    color: white;
+  }
+
+  75% {
+    color: green;
+  }
+
+  100% {
+    color: white;
+  }
 }
 
 .articles-show {
