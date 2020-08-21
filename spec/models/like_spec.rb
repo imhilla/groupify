@@ -13,6 +13,6 @@ RSpec.describe Like, type: :model do
   end
 
   it 'is valid with valid attributes' do
-    expect(User.last.likes.count).to eql 1
+    expect(User.first.likes.count).to eql 1
   end
 end

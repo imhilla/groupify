@@ -10,9 +10,11 @@ RSpec.describe User, type: :model do
   end
 
   before(:all) do
-    User.create(name: 'hasan', username: 'hasan', email: 'ozovalihasan@gmail.com', password: '123456')
+    User.destroy_all
+    User.create(name: 'peter', username: 'peter', email: 'peter@gmail.com', password: '123456')
+    User.create(name: 'clement', username: 'clement', email: 'clement@gmail.com', password: '123456')
   end
   it 'creates a user' do
-    expect(User.all.count).to be_eql 1
+    expect(User.all.count).to be_eql 2
   end
 end
