@@ -3,7 +3,7 @@ module ArticlesHelper
     if article.group_id.present?
       link_to Group.find(article.group_id).name, group_path(article.group_id) 
     else
-      puts '#Groupify'
+      link_to '#Groupify'
     end
   end
 

@@ -2,7 +2,6 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     @most_recent = Article.order('created_at desc')
-    @profile = Article.all.where("author_id =?", current_user.id)
   end
 
   def show
@@ -13,11 +12,12 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
-    @groups = Group.all
+    @groups = Group.all.map { |c| [c.name, c.id] }
   end
 
   def create
     @article = Article.new(article_params)
+    @article.group_id = params[:group_id]
     @article.author = current_user
     @article.save
 
@@ -31,6 +31,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :body, :icon ,groups_attributes: [ :id ])
+    params.require(:article).permit(:title, :body, :icon)
   end
 end
