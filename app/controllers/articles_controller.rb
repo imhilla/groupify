@@ -12,21 +12,24 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
-    @groups = Group.all.map { |c| [c.name, c.id] }
+    @groups = Group.all
   end
 
   def create
     @article = Article.new(article_params)
-    @article.group_id = params[:group_id]
     @article.author = current_user
     @article.save
 
-    redirect_to article_path(@article)
+    if @article.save
+      redirect_to article_path(@article)
+    else
+      render :new
+    end
   end
 
   private
 
   def article_params
-    params.require(:article).permit(:title, :body, :icon)
+    params.require(:article).permit(:title, :body, :icon ,groups_attributes: [ :id ])
   end
 end

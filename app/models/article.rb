@@ -5,4 +5,9 @@ class Article < ApplicationRecord
   has_many :likes, dependent: :destroy
   validates :title, presence: true
   validates :body, presence: true
+  validates_length_of :title, minimum: 5, maximum: 60
+  validates_length_of :body, minimum: 5, maximum: 300
+
+  accepts_nested_attributes_for :group
+
 end
