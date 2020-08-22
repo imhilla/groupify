@@ -10,11 +10,13 @@
 
 ## Description
 
-Groupify is a web app that allows users with particular mindset share articles or any content that partains to the group. Users get to create groups, then create articles under that group name amd image. Users of the app can see all articles in the feeds section, while having the oportunuty to view individuals article in their profile. Users can like articles and provide feedbacks inform of comments. 
+Groupify is a web app that allows users with a particular mindset to share articles or any content that pertains to the group. Users get to create groups, then create articles under that group name and image. Users of the app can see all articles in the feeds section, while having the opportunity to view individuals' articles in their profile. Users can like articles and provide feedback and information. 
 
 The apps function is so stellar that you can see who has liked and commented on an article. It shows group names as #hashtags and provides a default #groupify for stray articles.
 
-There are sections for example in the recent section, users can see articles in the latest written articles. The viceversa is true since users can see articles in ancient's order.
+There are sections for example in the recent section, users can see articles in the latest written articles. The viceversa is true since users can see articles in ancient order.
+
+
 
 ## Live version
 
@@ -24,36 +26,38 @@ This is a web app and not a website. Access the web app <a href="https://groupif
 
 ## Features
 
-In this capstone project, the following actions are done;
+In this capstone project, the following actions were done;
 
 ### Functionalities added
 
 This project was built from scratch and here's the MVP of this version
- - The user logs in to the app with their username and password.
- - The user is presented with a profile page that includes links to:
-    - "Users profle with username, name, and image".
-    - "Feed".
-    - "External articles without group".
-    - "All my transactions".
-    - "All groups in the application".
- - When user opens "Users profle with username, name, and image" page:
-    - Total articles count is shown at the top.
-    - All current user's articles are shown.
-    - An action button create article is shown.
- - When user opens "Feed link":
-    - Total articles count is shown at the top.
-    - All articles are shown.
-    - An action button create article is shown.
- - When user opens "Externals"
-    - Articles without groups are shown, sorted by the most recent.
- - When user opens "All groups" page:
-    - A list of all groups is displayed
-    - Each group displays its icon, name and creation date.
-    - An action button "Create new" is displayed.
- - When user opens "Create new group" page:
-    - A form with all necessary fields is displayed.
+- The user logs in to the app with their username and password.
+- The user is presented with a profile page that includes links to:
+   - "Users profile with username, name, and image".
+   - "Feed".
+   - "External articles without group".
+   - "All my transactions".
+   - "All groups in the application".
+- When user opens "Users profile with username, name, and image" page:
+   - Total articles count is shown at the top.
+   - All current user's articles are shown.
+   - An action button create article is shown.
+- When user opens "Feed link":
+   - Total articles count is shown at the top.
+   - All articles are shown.
+   - An action button create article is shown.
+- When user opens "Externals"
+   - Articles without groups are shown, sorted by the most recent.
+- When user opens "All groups" page:
+   - A list of all groups is displayed
+   - Each group displays its icon, name and creation date.
+   - An action button "Create new" is displayed.
+- When user opens "Create new group" page:
+   - A form with all necessary fields is displayed.
+ 
+More functionalities are added such as the ability to like and comment at articles.
+ 
 
-More functionalities are added such as ability to like and comment at articles.
 
 ### Tests
 
