@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     @most_recent = Article.order('created_at desc')
+    @profile = Article.all.where("author_id =?", current_user.id)
   end
 
   def show

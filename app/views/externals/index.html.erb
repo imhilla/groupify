@@ -30,11 +30,8 @@
           <div class="article-body-height">
             <%= link_to article.body , article_path(article), :class => 'article-body'%>
           </div>
-          <div class="hash-tag">
-           <% if article.group_id.present? %>
-             <span>#</span><%= link_to Group.find(article.group_id).name, group_path(article.group_id) %>
-            <% else %>#Groupify
-            <% end %>
+         <div class="hash-tag">
+            <%= article_hash_tag(article) %>
           </div>
         </div>
       </div>
