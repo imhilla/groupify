@@ -11,10 +11,16 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
     @comment.save
 
-    redirect_to article_path(@comment.article)
+    if @comment.save
+      redirect_to article_path(@comment.article)
+    else
+      render :new
+    end
   end
+  
+  private
 
   def comment_params
-    params.require(:comment).permit(:user_name, :user_id, :body)
+    params.require(:comment).permit(:user_name, :user_id, :body, :author_name)
   end
 end
