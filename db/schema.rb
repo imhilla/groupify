@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_20_045436) do
+ActiveRecord::Schema.define(version: 2020_08_22_125033) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_08_20_045436) do
     t.integer "author_id"
     t.string "group_id"
     t.string "—force"
+    t.integer "amount"
   end
 
   create_table "articles_likes", id: false, force: :cascade do |t|
