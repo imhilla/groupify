@@ -3,9 +3,7 @@
 
 <div class="article-show">
   <div class="articles-show">
-      <% if @article.group_id.present? %>
-    <%= image_tag Group.find(@article.group_id).icon.url(:medium), :class => 'article-icon' %>
-    <% end %>
+    <%= article_image(article) %>
     <h1><%= @article.title %></h1>
   </div>
   <p><%= @article.body %></p>
