@@ -41,12 +41,15 @@
 }
 
 .new-article {
-  font-size: 25px;
+  font-size: 1em;
   color: white;
   position: fixed;
   bottom: 2.75em;
   right: 23px;
   z-index: 1000;
+  background-color: green;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .new-article:hover {

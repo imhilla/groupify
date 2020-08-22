@@ -59,9 +59,5 @@
     </div>
     <% end %><br>
   </div>
-  <div class='refresh'>
-    <%= button_to "Scan", ancients_path, class: "refresh-button", :method => :get %>
-  </div>
-  <%= link_to "+", new_article_path, class: "new-article" %>
-  <div class="new-article-background"></div>
+  <%= link_to "Add new", new_article_path, class: "new-article" %>
 </div>
