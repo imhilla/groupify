@@ -5,12 +5,12 @@
     <% @groupalp.each do |group| %>
     <div class="group-items">
       <div>
-        <%= image_tag group.icon.url(:medium), :class => 'group-image' %>
+        <%= group_icon(group) %>
       </div>
       <div class="group-description">
-        <%= link_to group.name.capitalize, group_path(group) %>
+        <%= group_name(group) %>
         <div class="created">
-          <%= group.created_at.strftime("%d %b %Y") %>
+          <%= group_created_date(group) %>
         </div>
       </div>
     </div>

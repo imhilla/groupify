@@ -3,12 +3,12 @@
 
 <div class="under-group">
   <h2> Group articles </h2>
-  <% Article.where(group_id: @group.id).each do |article| %>
+  <% group_article.each do |article| %>
   <div class="show-article">
     <div class="show-body">
       <h3><%= article.title %></h3>
       <p><%= article.body %></p>
-      <h3>Author: <span><%= User.find(article.author_id).username %></span></h3>
+      <h3>Author: <span><%= article_author(article) %></span></h3>
     </div>
   </div>
   <% end %>
