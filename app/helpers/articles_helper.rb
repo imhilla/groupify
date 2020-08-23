@@ -65,7 +65,8 @@ module ArticlesHelper
     if article.likes.count == 0
       ''
     elsif article.likes.count == 1
-      who(article).first
+      a = who(article).first
+      a.to_s + " liked"
     elsif article.likes.count == 2
       a = who(article)[0]
       b = who(article)[1] 
