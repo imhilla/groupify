@@ -7,15 +7,15 @@
       articles:
     </div>
     <div class="count">
-      <%= Article.where(group_id: [nil, ""]).count %>
+      <%= external_count %>
     </div>
   </div>
   <div class="articles">
-    <% Article.where(group_id: [nil, ""]).each do |article| %>
+    <% external_article.each do |article| %>
     <div class="article-container">
          <div class="who-liked">
         <%= check_likes(article) %>
-        <%= article.likes.find_each do |like| %>
+        <%= group_likes(article).find_each do |like| %>
         <p><i class="fa fa-heart"></i>
           <%= like.user.username %>
         </p>
@@ -24,7 +24,7 @@
       </div>
       <div class="article-row">
         <div>
-          <%= image_tag User.find(article.author_id).image.url(:medium), :class => 'article-icon' %>
+          <%= external_user(article) %>
         </div>
         <div class="article-second">
           <div class="article-body-height">
