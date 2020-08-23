@@ -16,14 +16,14 @@
     </div>
   </div>
   <div class="articles">
+
+
     <% most_recent.each do |article| %>
     <div class="article-container">
         <div class="who-liked">
         <p><i class="fa fa-heart"></i>
-        <%= article_likes(article).find_each do |like| %>
-          <%= who(like, article) %>
+           <%= who_liked(article) %>  
         </p>
-        <% end %>
       </div>
       <div class="article-row">
         <div>

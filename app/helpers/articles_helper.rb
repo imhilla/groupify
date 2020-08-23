@@ -53,16 +53,22 @@ module ArticlesHelper
     Article.order('created_at desc')
   end
 
-  def article_likes(article)
-    article.likes
-  end
-
-  def who(like, article)
-    if article.likes.count == 1
-      like.user.username + ' liked'
-    else
-      like.first.user.username + ' and others liked'
+  def who(article)
+    article.likes.map do |like|
+    b = like.user.username
+    b.to_s + " liked"
     end
   end
 
+
+  def who_liked(article)
+    if article.likes.count == 0
+      ''
+    elsif article.likes.count == 1
+      who(article).first
+    else
+     b = who(article)[2] 
+     b.to_s + " and others"
+    end
+  end
 end
