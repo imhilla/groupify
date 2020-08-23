@@ -1,8 +1,6 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
-    @recents = Article.order('created_at desc')
-    @users_articles = Article.all.where("author_id =?", current_user.id)
   end 
 
   def show

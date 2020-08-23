@@ -12,19 +12,17 @@
       articles:
     </div>
     <div class="count">
-      <%= Article.all.size%>
+      <%= article_size %>
     </div>
   </div>
   <div class="articles">
-    <% @most_recent.each do |article| %>
+    <% most_recent.each do |article| %>
     <div class="article-container">
         <div class="who-liked">
-        <%= check_likes(article) %>
-        <%= article.likes.find_each do |like| %>
         <p><i class="fa fa-heart"></i>
-          <%= like.user.username %>
+        <%= article_likes(article).find_each do |like| %>
+          <%= who(like, article) %>
         </p>
-        <p>&nbsp; liked</p>
         <% end %>
       </div>
       <div class="article-row">
@@ -33,7 +31,7 @@
         </div>
         <div class="article-second">
           <div class="profile-name">
-            <h3>@<%= User.find(article.author_id).username %><%= article.created_at.strftime(" • %d %b %y") %></h3>
+            <h3>@<%= profile_username(article) %><%= article_created(article) %></h3>
           </div>
           <div class="article-body-height">
             <%= link_to article.body , article_path(article), :class => 'article-body'%>
@@ -44,12 +42,12 @@
           <div class="like-retweet">
             <button class="d-flex flex-row">
               <i class="fa fa-comment"></i>
-              <%= article.comments.count unless article.comments.count.zero? %>
+              <%= article_comment(article) %>
             </button>
             <button><i class="fa fa-retweet"></i></button>
             <button>
               <i class="fa fa-heart"></i>
-              <%= article.likes.size unless article.likes.count.zero? %>
+              <%= article_like(article) %>
             </button>
             <button><i class="fa fa-share-alt"></i></button>
           </div>

@@ -1,12 +1,12 @@
 <div>
   <div class="commented-by">
     <div>
-      <%= image_tag User.find(comment.user_id).image.url(:medium), :class => 'comment-icon' %>
+      <%= comment_user(comment) %>
     </div>
     <div class="comment-body">
       <div class="comment-username-name">
-        <p><%= User.find(comment.user_id).name %></P>
-        <p>@<%= comment.user_name %></P>
+        <p><%= comment_name(comment) %></P>
+        <p>@<%= comment_username(comment) %></P>
       </div>
       <p class="comment"><%= comment.body %></p>
     </div>

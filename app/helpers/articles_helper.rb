@@ -45,4 +45,24 @@ module ArticlesHelper
     article.created_at.strftime(" • %d %b %y")
   end
 
+  def article_size
+    Article.all.size
+  end
+
+  def most_recent
+    Article.order('created_at desc')
+  end
+
+  def article_likes(article)
+    article.likes
+  end
+
+  def who(like, article)
+    if article.likes.count == 1
+      like.user.username + ' liked'
+    else
+      like.first.user.username + ' and others liked'
+    end
+  end
+
 end
