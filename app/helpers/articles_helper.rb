@@ -72,8 +72,9 @@ module ArticlesHelper
       b = who(article)[1] 
       b.to_s + " and " + a.to_s + " liked"
     else
-     b = who(article)[2] 
-     b.to_s + " and others liked"
+    b = who(article)[1] 
+    c = who(article)[2]
+    b.to_s + " " + c.to_s + " and others liked"
     end
   end
 end
