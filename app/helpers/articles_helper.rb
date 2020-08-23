@@ -56,7 +56,7 @@ module ArticlesHelper
   def who(article)
     article.likes.map do |like|
     b = like.user.username
-    b.to_s + " liked"
+    b.to_s
     end
   end
 
@@ -66,9 +66,13 @@ module ArticlesHelper
       ''
     elsif article.likes.count == 1
       who(article).first
+    elsif article.likes.count == 2
+      a = who(article)[0]
+      b = who(article)[1] 
+      b.to_s + " and " + a.to_s + " liked"
     else
      b = who(article)[2] 
-     b.to_s + " and others"
+     b.to_s + " and others liked"
     end
   end
 end
