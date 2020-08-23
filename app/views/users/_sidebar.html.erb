@@ -1,14 +1,14 @@
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="sidebar-content">
-    <%= User.where("id =?", current_user.id).find_each do |user| %>
-    <%= image_tag user.image.url(:medium), :class => 'sidebar-image' %>
-    <h2><%= user.name %><br></h2>
-    <h3><%= user.username %><br></h3>
+    <%= logged_user.find_each do |user| %>
+    <%= user_image(user) %>
+    <h2><%= user_name(user) %><br></h2>
+    <h3><%= user_username(user)%><br></h3>
     <% end %>
   </div>
   <div class="side-bar-links">
-    <%= User.where("id =?", current_user.id).find_each do |user| %>
+    <%= user_current_user.find_each do |user| %>
     <div class="profile-link">
       <div class="border-i"><i class="fa fa-user"></i></div><%= link_to 'Profile', user_path(user.id), :class => 'side-link1', id: 'side-link1'  %>
     </div><div class="hard-rule"></div>

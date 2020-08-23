@@ -12,7 +12,7 @@
     <div class="article-container">
       <div class="article-row">
         <div>
-          <%= image_tag User.find(article.author_id).image.url(:medium), :class => 'article-icon' %>
+          <%= profile_image(article) %>
         </div>
         <div class="article-second">
           <div class="profile-name">

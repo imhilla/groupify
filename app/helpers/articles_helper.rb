@@ -9,7 +9,7 @@ module ArticlesHelper
 
   def article_image(article)
      if article.group_id.present?
-       image_tag Group.find(article.group_id).icon.url(:medium)
+       image_tag Group.find(article.group_id).icon.url(:medium), :class => 'article-icon'
     end
   end
 
@@ -30,7 +30,7 @@ module ArticlesHelper
   end
 
   def profile_image(article)
-    image_tag User.find(article.author_id).image.url(:medium)
+    image_tag User.find(article.author_id).image.url(:medium), :class => 'article-icon'
   end
 
   def profile_name(article)
