@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
       render :new
     end
   end
-  
+
   private
 
   def comment_params

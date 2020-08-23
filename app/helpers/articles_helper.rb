@@ -1,24 +1,22 @@
 module ArticlesHelper
   def article_hash_tag(article)
     if article.group_id.present?
-      link_to  Group.find(article.group_id).name, group_path(article.group_id) 
+      link_to Group.find(article.group_id).name, group_path(article.group_id)
     else
       link_to 'Groupify'
     end
   end
 
   def article_image(article)
-     if article.group_id.present?
-       image_tag Group.find(article.group_id).icon.url(:medium), :class => 'article-icon'
-    end
+    image_tag Group.find(article.group_id).icon.url(:medium), class: 'article-icon' if article.group_id.present?
   end
 
   def article_order
-    Article.order("created_at desc")
+    Article.order('created_at desc')
   end
 
-  def article_count 
-    Article.all.where("author_id =?", current_user.id).count
+  def article_count
+    Article.all.where('author_id =?', current_user.id).count
   end
 
   def article_like(article)
@@ -30,7 +28,7 @@ module ArticlesHelper
   end
 
   def profile_image(article)
-    image_tag User.find(article.author_id).image.url(:medium), :class => 'article-icon'
+    image_tag User.find(article.author_id).image.url(:medium), class: 'article-icon'
   end
 
   def profile_name(article)
@@ -42,7 +40,7 @@ module ArticlesHelper
   end
 
   def article_created(article)
-    article.created_at.strftime(" • %d %b %y")
+    article.created_at.strftime(' • %d %b %y')
   end
 
   def article_size
@@ -55,26 +53,33 @@ module ArticlesHelper
 
   def who(article)
     article.likes.map do |like|
-    b = like.user.username
-    b.to_s
+      b = like.user.username
+      b.to_s
     end
   end
 
+  def who_others_count(article)
+    article.likes.count - 2
+  end
 
   def who_liked(article)
-    if article.likes.count == 0
+    if article.likes.count.zero?
       ''
     elsif article.likes.count == 1
       a = who(article).first
-      a.to_s + " liked"
+      a.to_s + ' liked'
     elsif article.likes.count == 2
       a = who(article)[0]
-      b = who(article)[1] 
-      b.to_s + " and " + a.to_s + " liked"
+      b = who(article)[1]
+      b.to_s + ' and ' + a.to_s + ' liked'
+    elsif article.likes.count == 3
+      b = who(article)[1]
+      c = who(article)[2]
+      b.to_s + ', ' + c.to_s + ' and ' + who_others_count(article).to_s + ' other liked'
     else
-    b = who(article)[1] 
-    c = who(article)[2]
-    b.to_s + " " + c.to_s + " and others liked"
+      b = who(article)[1]
+      c = who(article)[2]
+      b.to_s + ', ' + c.to_s + ' and ' + who_others_count(article).to_s + ' others liked'
     end
   end
 end

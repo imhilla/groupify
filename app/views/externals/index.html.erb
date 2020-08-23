@@ -13,14 +13,10 @@
   <div class="articles">
     <% external_article.each do |article| %>
     <div class="article-container">
-         <div class="who-liked">
-        <%= check_likes(article) %>
-        <%= group_likes(article).find_each do |like| %>
+       <div class="who-liked">
         <p><i class="fa fa-heart"></i>
-          <%= like.user.username %>
+          <%= who_liked(article) %>
         </p>
-        <p>&nbsp; liked</p>
-        <% end %>
       </div>
       <div class="article-row">
         <div>

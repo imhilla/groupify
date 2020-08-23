@@ -1,6 +1,6 @@
 module GroupsHelper
   def group_icon(group)
-    image_tag group.icon.url(:medium), :class => 'group-image'
+    image_tag group.icon.url(:medium), class: 'group-image'
   end
 
   def group_name(group)
@@ -8,7 +8,7 @@ module GroupsHelper
   end
 
   def group_created_date(group)
-    group.created_at.strftime("%d %b %Y")
+    group.created_at.strftime('%d %b %Y')
   end
 
   def group_article
