@@ -77,7 +77,7 @@ More functionalities are added such as the ability to like and comment at articl
 - Clone this repository
 - Open terminal
 - Change directory by using `cd groupify/`
-- Run `bundle install`
+- Run `bundle install --without production`
 - Run `rails db:migrate`
 - Open rails server by using `rails s`
 - Open browser and go to http://localhost:3000
