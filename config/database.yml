@@ -21,11 +21,9 @@ test:
   database: db/test.sqlite3
 
 production:
-    <<: *default
-    adapter: postgresql
-    encoding: unicode
-    database: <%= ENV['RDS_DB_NAME'] %>
-    username: <%= ENV['RDS_USERNAME'] %>
-    password: <%= ENV['RDS_PASSWORD'] %>
-    host: <%= ENV['RDS_HOSTNAME'] %>
-    port: <%= ENV['RDS_PORT'] %>
+  adapter: postgresql
+  encoding: unicode
+  database: groupify
+  pool: 5
+  username: imhilla
+  password: 123456
