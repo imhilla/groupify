@@ -1,5 +1,8 @@
-<%= render 'details' %>
-<%= render 'users/sidebar' %>
+<div class="main">
+  <button class="openbtn" onclick="openNav()">☰</button>
+  <h4>Add a comment</h4>
+  <i class="fa fa-search"></i>
+</div><%= render 'users/sidebar' %>
 <div class="container article-new">
   <h1>Create a New Article</h1>
   <%= form_for(@article) do |f| %>
@@ -9,7 +12,7 @@
     <% end %>
   </ul>
 
-  <%= select_tag(:group_id, options_for_select(@groups), :include_blank => 'None') %>
+  <%= select_tag(:group_id, options_for_select(Group.all), :include_blank => 'None') %>
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title, :class => "text-feild-new" %>
