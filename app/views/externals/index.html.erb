@@ -29,6 +29,17 @@
          <div class="hash-tag">
             #<%= article_hash_tag(article) %>
           </div>
+           <div class="like-retweet">
+            <button class="d-flex flex-row">
+              <i class="fa fa-comment"></i>
+              <%= article_comment(article)  %>
+              <button><i class="fa fa-retweet"></i></button>
+            </button>
+            <button class='button-like'>
+              <i class="fa fa-heart"> </i>&nbsp;<%= article_like(article) %><%= like_btn(article) %>
+            </button>
+            <button><i class="fa fa-share-alt"></i></button>
+          </div>
         </div>
       </div>
     </div>
