@@ -12,7 +12,7 @@
     <% end %>
   </ul>
 
-  <%= select_tag(:group_id, options_for_select(Group.all), :include_blank => 'None') %>
+  <%= select_tag(:group_id, options_for_select(@groups), :include_blank => 'None') %>
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title, :class => "text-feild-new" %>
