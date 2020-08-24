@@ -1,10 +1,9 @@
 <div class="main">
   <button class="openbtn" onclick="openNav()">☰</button>
-  <h4>Add a comment</h4>
+    <h4>New article</h4>
   <i class="fa fa-search"></i>
 </div><%= render 'users/sidebar' %>
 <div class="container article-new">
-  <h1>Create a New Article</h1>
   <%= form_for(@article) do |f| %>
   <ul>
     <% @article.errors.full_messages.each do |error| %>
