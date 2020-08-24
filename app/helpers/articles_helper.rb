@@ -12,7 +12,7 @@ module ArticlesHelper
   end
 
   def article_order
-    Article.order('created_at desc')
+    Article.order('created_at desc').includes(:group)
   end
 
   def article_count
@@ -48,7 +48,7 @@ module ArticlesHelper
   end
 
   def most_recent
-    Article.order('created_at desc')
+    Article.order('created_at desc').includes(:group)
   end
 
   def who(article)
