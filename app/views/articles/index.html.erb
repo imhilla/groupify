@@ -17,7 +17,6 @@
   </div>
   <div class="articles">
 
-
     <% most_recent.each do |article| %>
     <div class="article-container">
       <div class="who-liked">
@@ -47,10 +46,14 @@
             <button><i class="fa fa-retweet"></i></button>
             <button>
               <i class="fa fa-heart"></i>
-              <%= article_like(article) %>
+              <%= like_btn(article) %>
             </button>
-            <button><i class="fa fa-share-alt"></i></button>
+            <button><i class="fa fa-share-alt"> </i></button>
           </div>
+          <div class="like-icon mx-2 <%= 'red' if current_user.likes %>" data-id="<%= article.id %>">
+            <i class="fas fa-heart"></i>
+          </div>
+
         </div>
       </div>
     </div>
