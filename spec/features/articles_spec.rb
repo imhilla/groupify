@@ -6,7 +6,7 @@ RSpec.describe 'aricles', type: :system do
       do_signup('hillary', 'hillary', 'hillaryodhiambo@gmail.com', '123456')
       click_button(class: 'openbtn')
       click_link('side-link2')
-      click_link('+')
+      click_link('Add new')
       create_article
       visit('/articles')
       expect(page).to have_content 'Capstone projects are projects to test your mastery of a particular section'
@@ -16,7 +16,7 @@ RSpec.describe 'aricles', type: :system do
       do_signup('hillary', 'hillary', 'hillaryodhiambo@gmail.com', '123456')
       click_button(class: 'openbtn')
       click_link('side-link2')
-      click_link('+')
+      click_link('Add new')
       create_article
       visit('/articles')
       click_link('Most recent')
@@ -27,7 +27,7 @@ RSpec.describe 'aricles', type: :system do
       do_signup('hillary', 'hillary', 'hillaryodhiambo@gmail.com', '123456')
       click_button(class: 'openbtn')
       click_link('side-link2')
-      click_link('+')
+      click_link('Add new')
       create_article
       create_comment
       expect(page).to have_content 'I am working on my capstone right now'

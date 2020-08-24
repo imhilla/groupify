@@ -16,7 +16,7 @@ RSpec.describe 'users_controller', type: :system do
     do_signup('mercy', 'akoth', 'mercyakoth@gmail.com', '123456')
     click_button(class: 'openbtn')
     click_link('side-link2')
-    click_link('+')
+    click_link('Add new')
     create_article
     click_button(class: 'openbtn')
     click_link('side-link1')

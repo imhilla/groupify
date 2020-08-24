@@ -6,9 +6,10 @@ RSpec.describe 'likes', type: :system do
       do_signup('hillary', 'hillary', 'hillaryodhiambo@gmail.com', '123456')
       click_button(class: 'openbtn')
       click_link('side-link2')
-      click_link('+')
+      click_link('Add new')
       create_article
       create_like
+      page.driver.browser.navigate.refresh
       expect(page).to have_content '1 like'
     end
   end

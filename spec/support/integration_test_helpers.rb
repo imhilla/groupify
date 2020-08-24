@@ -23,13 +23,13 @@ module IntegrationTestHelpers
     fill_in('Title', with: 'What is a capstone project')
     fill_in('Title', with: 'What is a capstone project?')
     fill_in('Body', with: 'Capstone projects are projects to test your mastery of a particular section')
-    click_button('commit')
+    click_button('submitc')
   end
 
   def create_group
     fill_in('Name', with: 'Amazon')
     attach_file('group[icon]', "#{Rails.root}/spec/files/attachment.jpeg", visible: false)
-    click_button('commit')
+    click_button('Create Group')
   end
 
   def create_article_group
@@ -37,7 +37,7 @@ module IntegrationTestHelpers
     fill_in('Title', with: 'What is a capstone project')
     fill_in('Title', with: 'What is a capstone project?')
     fill_in('Body', with: 'Capstone projects')
-    click_button('commit')
+    click_button('submitc')
   end
 
   def create_comment

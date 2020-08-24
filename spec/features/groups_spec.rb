@@ -21,7 +21,7 @@ RSpec.describe 'aricles', type: :system do
       create_group
       click_button(class: 'openbtn')
       click_link('side-link2')
-      click_link('+')
+      click_link('Add new')
       create_article_group
       click_button(class: 'openbtn')
       click_link('side-link3')
