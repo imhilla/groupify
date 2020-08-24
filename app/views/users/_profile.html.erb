@@ -10,6 +10,11 @@
   <div class="articles">
      <% article_order.each do |article| %>
     <div class="article-container">
+    <div class="who-liked">
+        <p><i class="fa fa-heart"></i>
+          <%= who_liked(article) %>
+        </p>
+      </div>
       <div class="article-row">
         <div>
           <%= profile_image(article) %>
