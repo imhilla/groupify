@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
-    @groups = Group.all.map { |c| [c.name, c.id] }
+    @groups = Group.all
   end
 
   def create
