@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :set_article
+
   def new
     @comment = Comment.new(article_id: params[:article_id])
     @article = Article.find(params[:article_id])
@@ -9,6 +11,7 @@ class CommentsController < ApplicationController
     @comment.article_id = params[:article_id]
     @comment.user_name = current_user.username
     @comment.user_id = current_user.id
+    @comment.author_name = current_user.name
     @comment.save
 
     if @comment.save
@@ -16,6 +19,10 @@ class CommentsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def set_article
+    @article = Article.find(params[:article_id])
   end
 
   private
