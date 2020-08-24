@@ -4,12 +4,12 @@ Rails.application.routes.draw do
            :sessions => "users/sessions",
            :registrations => "users/registrations" }
            resources :users, :only => [:index, :show]
-           resources :articles
-           resources :groups
-           resources :externals
+           resources :articles, :only => [:create, :new, :show, :index]
+           resources :groups, :only => [:create, :new, :show, :index]
+           resources :externals, :only => [:index]
            resources :articles do
-           resources :comments
-           resources :likes
+           resources :comments, :only => [:create, :new]
+           resources :likes, :only => [:create]
           end
           resources :ancients, :only => [:index]
 end
