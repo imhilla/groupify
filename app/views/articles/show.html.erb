@@ -9,7 +9,7 @@
   <p><%= @article.body %></p>
   <div class="like-comment">
     <div class="article-like-show d-flex">
-      <%= button_to 'like', article_likes_path(@article), method: :post, :class => 'like-button-comment btn-xs' %>
+      <%= button_to 'like', article_likes_path(@article, 'articles/show'), method: :post, :class => 'like-button-comment btn-xs' %>
       <%= pluralize(@article.likes.count, "like") %>
     </div>
     <div class="article-like-comment d-flex">

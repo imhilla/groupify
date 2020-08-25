@@ -15,10 +15,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.build(article_params)
     @article.group_id = params[:group_id]
-    @article.author = current_user
-    @article.save
 
     if @article.save
       redirect_to article_path(@article)

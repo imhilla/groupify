@@ -4,8 +4,8 @@ module LikesHelper
     end
   end
 
-  def like_btn(article)
+  def like_btn(article, page)
     @like = Like.find_by(article: article, user: current_user)
-    button_to('', article_likes_path(article_id: article.id), method: :post, class: 'like-button-dynamic')
+    button_to('', article_likes_path(article_id: article.id, page: page), method: :post, class: 'like-button-dynamic')
   end
 end

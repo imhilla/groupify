@@ -8,7 +8,7 @@ Rails.application.routes.draw do
            resources :groups, :only => [:create, :new, :show, :index]
            resources :externals, :only => [:index]
            resources :articles do
-           resources :comments, :only => [:create, :new]
+           resources :comments, :only => [:create, :new, :show]
            resources :likes, :only => [:create]
           end
           resources :ancients, :only => [:index]

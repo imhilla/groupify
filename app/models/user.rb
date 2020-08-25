@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_attached_file :image, styles: { large: '600x600>', medium: '300x300>', thumb: '150x150#' }
   has_attached_file :image
   has_many :likes, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :articles, dependent: :destroy, foreign_key: 'author_id'
   validates_attachment_content_type :image, content_type: %r{\Aimage/.*\z}
 
   def thumbnail(input)

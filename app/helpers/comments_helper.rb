@@ -8,6 +8,6 @@ module CommentsHelper
   end
 
   def comment_username(comment)
-    comment.user_name
+    comment.user.username
   end
 end
