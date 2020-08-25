@@ -82,11 +82,13 @@ module ArticlesHelper
       b.to_s + ', ' + c.to_s + ' and ' + who_others_count(article).to_s + ' others liked'
     end
   end
+  # rubocop:disable Style/GuardClause
 
   def faheart(article)
     if article.likes.count.positive?
-      content_tag(:i, :class => "fa fa-heart") do
+      content_tag(:i, class: 'fa fa-heart') do
       end
     end
   end
 end
+# rubocop:enable Style/GuardClause
