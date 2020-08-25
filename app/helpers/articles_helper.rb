@@ -53,7 +53,7 @@ module ArticlesHelper
 
   def who(article)
     article.likes.map do |like|
-      b = like.user.username
+      b = like.user.username.downcase
       b.to_s
     end
   end
