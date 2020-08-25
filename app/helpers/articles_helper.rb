@@ -12,7 +12,7 @@ module ArticlesHelper
   end
 
   def article_order
-    Article.order('created_at desc').includes(:group)
+    Article.all.where('author_id =?', current_user.id).includes(:group)
   end
 
   def article_count
