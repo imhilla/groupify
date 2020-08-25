@@ -12,7 +12,7 @@
       <% @most_ancient.each do |article| %>
       <div class="article-container">
         <div class="who-liked">
-          <p><i class="fa fa-heart"></i>
+          <p><%= faheart(article) %>
             <%= who_liked(article) %>
           </p>
         </div>
