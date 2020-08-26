@@ -1,5 +1,4 @@
 require 'rails_helper'
-# rubocop:disable Metrics/LineLength
 
 RSpec.describe Comment, type: :model do
   describe 'associations' do
@@ -16,4 +15,3 @@ RSpec.describe Comment, type: :model do
     expect(Comment.all.count).to be_eql 1
   end
 end
-# rubocop:enable Metrics/LineLength
