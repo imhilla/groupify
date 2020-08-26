@@ -1,0 +1,41 @@
+<%= render './users/sidebar' %>
+<%= render './ancients/g' %>
+
+<div class="all">
+  <div class="articles">
+    <% external_article.each do |article| %>
+    <div class="article-container">
+       <div class="who-liked">
+        <p><i class="fa fa-heart"></i>
+          <%= who_liked(article) %>
+        </p>
+      </div>
+      <div class="article-row">
+        <div>
+          <%= external_user(article) %>
+        </div>
+        <div class="article-second">
+          <div class="article-body-height">
+            <%= link_to article.body , article_path(article), :class => 'article-body'%>
+          </div>
+         <div class="hash-tag">
+           <p>#<%= article_hash_tag(article) %></p> 
+          </div>
+           <div class="like-retweet">
+            <button class="d-flex flex-row">
+              <i class="fa fa-comment"></i>
+              <%= article_comment(article)  %>
+              <button><i class="fa fa-retweet"></i></button>
+            </button>
+            <button class='button-like'>
+              <i class="fa fa-heart"> </i>&nbsp;<%= article_like(article) %><%= like_btn(article, 'externals/index') %>
+            </button>
+            <button><i class="fa fa-share-alt"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %><br>
+  </div>
+    <%= link_to "Add new", new_article_path, class: "new-article" %>
+</div>

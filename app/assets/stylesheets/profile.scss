@@ -1,0 +1,50 @@
+.profile-link {
+  display: flex;
+  margin: 0 10px 0 10px;
+}
+
+.hard-rule {
+  margin: 0 10px 0 50px;
+  border-top: 0.5px solid white;
+}
+
+.border-i {
+  border-radius: 50%;
+  border: 1px solid white;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  margin-top: 5px;
+}
+
+.fa-user {
+  font-size: 18px;
+  color: white;
+  position: relative;
+  top: 5px;
+  right: -7px;
+}
+
+.fa-home {
+  font-size: 18px;
+  color: white;
+  position: relative;
+  top: 5px;
+  right: -5px;
+}
+
+.fa-link {
+  font-size: 18px;
+  color: white;
+  position: relative;
+  top: 5px;
+  right: -6px;
+}
+
+.fa-users {
+  font-size: 16px;
+  color: white;
+  position: relative;
+  top: 5px;
+  right: -6px;
+}

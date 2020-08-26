@@ -1,0 +1,28 @@
+<div class="main">
+  <button class="openbtn" onclick="openNav()">☰</button>
+    <h4>New article</h4>
+  <i class="fa fa-search"></i>
+</div><%= render 'users/sidebar' %>
+<div class="container article-new">
+  <%= form_for(@article) do |f| %>
+  <ul>
+    <% @article.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+    <% end %>
+  </ul>
+  
+  <%= select_tag(:group_id, options_from_collection_for_select(Group.all, :id, :name) , :include_blank => 'None') %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title, :class => "text-feild-new" %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body,:class => "text-area-new" %>
+  </p>
+  <p>
+    <%= f.submit :name => 'submitc' %>
+  
+  </p>
+  <% end %>
+</div>

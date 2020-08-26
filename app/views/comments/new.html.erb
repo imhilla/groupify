@@ -1,0 +1,16 @@
+<%= render './users/sidebar' %>
+<%= render './ancients/g' %>
+
+<div class="comment-new d-flex j-center">
+  <h3>Post a Comment</h3>
+
+  <%= form_for [ @article, @comment ] do |f| %>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body, :class => 'text-area-new' %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+  <% end %>
+</div>

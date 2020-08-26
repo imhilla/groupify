@@ -1,0 +1,14 @@
+<div>
+  <div class="commented-by">
+    <div>
+      <%= comment_user(comment) %>
+    </div>
+    <div class="comment-body">
+      <div class="comment-username-name">
+        <p><%= comment_name(comment) %></P>
+        <p>@<%= comment_username(comment) %></P>
+      </div>
+      <p class="comment"><%= comment.body %></p>
+    </div>
+  </div>
+</div>

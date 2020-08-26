@@ -1,0 +1,303 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7em;
+  background-color: white;
+  -webkit-box-shadow: 0 10px 8px -10px rgba(143, 143, 143, 1);
+  -moz-box-shadow: 0 10px 8px -10px rgba(143, 143, 143, 1);
+  box-shadow: 0 10px 8px -10px rgba(143, 143, 143, 1);
+}
+
+.count {
+  font-weight: bold;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(235, 235, 235);
+  min-height: 100vh;
+}
+
+.article-body {
+  color: black;
+  font-size: 0.8em;
+  line-height: 3px;
+}
+
+.article-body:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.hash-tag {
+  color: rgb(74, 147, 255);
+  font-size: 0.8em;
+}
+
+.new-article {
+  font-size: 1em;
+  color: white;
+  position: fixed;
+  bottom: 2.75em;
+  right: 23px;
+  z-index: 1000;
+  background-color: green;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.new-article:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.new-article-background {
+  position: fixed;
+  bottom: 4.5em;
+  right: 15px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #3272bb;
+}
+
+.article-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: white;
+  padding: 10px 5px 10px 5px;
+  margin: 5px 10px;
+  width: 95vw;
+}
+
+.article-row {
+  display: flex;
+}
+
+.article-icon {
+  height: 50px;
+  width: 50px;
+  margin-right: 0.3em;
+  border-radius: 50% !important;
+}
+
+.article-body-height {
+  line-height: 15px;
+}
+
+.article-second {
+  padding-left: 0.4em;
+}
+
+.article-second h3 {
+  font-size: 13px;
+  color: rgb(74, 147, 255);
+}
+
+.like-retweet {
+  display: flex;
+}
+
+.like-retweet button {
+  border: none;
+  background-color: white;
+  padding-right: 20px;
+  padding-top: 3px;
+  font-size: 13px;
+}
+
+.fa-comment {
+  padding: 3px 3px;
+}
+
+.like-retweet button:hover {
+  outline: none;
+}
+
+.like-retweet button i {
+  color: rgb(74, 147, 255);
+}
+
+.article-show {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: start;
+}
+
+.article-show h1 {
+  font-size: 1.3em;
+}
+
+.profile-name {
+  display: flex;
+}
+
+.profile-name h3 {
+  padding-right: 5px;
+  color: black;
+}
+
+.most-recent {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  justify-content: flex-end;
+  background-color: #3272bb;
+}
+
+.most-recent div {
+  padding: 0.5em 1em;
+  color: white;
+}
+
+.most-recent-link {
+  color: white;
+}
+
+.most-recent-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.refresh {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 13%;
+  background-color: #5fb523;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.refresh-button {
+  text-transform: uppercase;
+  color: white;
+  background-color: #5fb523;
+  font-size: 1.2em;
+  padding: 0.3em 5em;
+  border: 1px solid white;
+  margin-top: 0.5em;
+  border-radius: 5px;
+}
+
+.refresh-button:hover {
+  outline: none;
+}
+
+.all {
+  padding-bottom: 2em;
+}
+
+.article-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2em;
+}
+
+.article-new h1 {
+  font-size: 1.3em;
+}
+
+.text-area-new {
+  width: 300px;
+  height: 100px;
+}
+
+.text-feild-new {
+  width: 300px;
+  height: 30px;
+}
+
+.article-show h3 {
+  font-size: 17px;
+}
+
+.main h2 {
+  font-size: 30px;
+  padding: 10px;
+  color: white;
+}
+
+.main h4 {
+  padding: 10px;
+  color: white;
+}
+
+.articles-show {
+  display: flex;
+  flex-direction: row;
+}
+
+.articles-show h1 {
+  padding: 20px 0 0 10px;
+}
+
+.article-show p {
+  font-size: 15px;
+  padding: 10px 0;
+}
+
+.like-comment {
+  display: flex;
+  justify-content: space-between;
+  width: 95vw;
+  border-top: 1px solid rgb(214, 214, 214);
+  border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.article-like-show,
+.article-like-comment {
+  padding: 10px 0;
+}
+
+.commented-by {
+  display: flex;
+  margin-top: 20px;
+}
+
+.comment-icon {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.comment-username-name {
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+}
+
+.comment-username-name p {
+  padding-right: 5px;
+  font-weight: bold;
+}
+
+.comment-body {
+  margin: 0 10px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.like-button-comment {
+  margin-right: 5px;
+  color: white;
+  border: none;
+  background-color: green;
+  border-radius: 5px;
+}
+
+.like-button-comment:hover {
+  outline: none;
+}
