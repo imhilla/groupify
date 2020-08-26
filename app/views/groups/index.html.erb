@@ -1,0 +1,20 @@
+<%= render './users/sidebar' %>
+<%= render './ancients/g' %>
+<div class="all-groups">
+  <div class="groups">
+    <% @groupalp.each do |group| %>
+    <div class="group-items">
+      <div>
+        <%= group_icon(group) %>
+      </div>
+      <div class="group-description">
+        <%= group_name(group) %>
+        <div class="created">
+          <%= group_created_date(group) %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <%= link_to "Create New", new_group_path, class: "button btn" %>
+</div>

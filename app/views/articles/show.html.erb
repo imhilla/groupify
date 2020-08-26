@@ -1,0 +1,21 @@
+<%= render './users/sidebar' %>
+<%= render 'details' %>
+
+<div class="article-show">
+  <div class="articles-show">
+    <%= article_image(@article) %>
+    <h1><%= @article.title %></h1>
+  </div>
+  <p><%= @article.body %></p>
+  <div class="like-comment">
+    <div class="article-like-show d-flex">
+      <%= button_to 'like', article_likes_path(@article, 'articles/show'), method: :post, :class => 'like-button-comment btn-xs' %>
+      <%= pluralize(@article.likes.count, "like") %>
+    </div>
+    <div class="article-like-comment d-flex">
+      <%= button_to 'comment', new_article_comment_path(@article), method: :get, :class => 'like-button-comment btn-xs' %>
+      <%= pluralize(@article.comments.count, "comment") %></div>
+  </div>
+  <%= render partial: 'articles/comment', collection: @article.comments %>
+  <%= link_to "Back", articles_path, :class => 'btn' %>
+</div>

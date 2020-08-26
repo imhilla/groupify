@@ -1,0 +1,51 @@
+<%= render './users/sidebar' %>
+<%= render './ancients/g' %>
+
+<div class="most-recent">
+  <div><%= link_to 'Most recent', articles_path, :class => 'most-recent-link' %></div>
+  <div><%= link_to 'Most ancient', ancients_path, :class => 'most-recent-link' %></div>
+</div>
+
+<div class="all">
+  
+  <div class="articles">
+
+    <% most_recent.each do |article| %>
+    <div class="article-container">
+      <div class="who-liked">
+        <p><%= faheart(article) %>
+          <%= who_liked(article) %>
+        </p>
+      </div>
+      <div class="article-row">
+        <div>
+          <%= image_tag User.find(article.author_id).image.url(:medium), :class => 'article-icon' %>
+        </div>
+        <div class="article-second">
+          <div class="profile-name">
+            <h3>@<%= profile_username(article) %><%= article_created(article) %></h3>
+          </div>
+          <div class="article-body-height">
+            <%= link_to article.body , article_path(article), :class => 'article-body'%>
+          </div>
+          <div class="hash-tag">
+         <p>#<%= article_hash_tag(article) %></p>   
+          </div>
+          <div class="like-retweet">
+            <button class="d-flex flex-row">
+              <i class="fa fa-comment"></i>
+              <%= article_comment(article) %>
+            </button>
+            <button><i class="fa fa-retweet"></i></button>
+            <button class='button-like'>
+              <i class="fa fa-heart"> </i>&nbsp;<%= article_like(article) %><%= like_btn(article, 'articles/index') %>
+            </button>
+            <button><i class="fa fa-share-alt"> </i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %><br>
+  </div>
+  <%= link_to "Add new", new_article_path, class: "new-article" %>
+</div>
